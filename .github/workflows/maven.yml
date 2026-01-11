@@ -29,7 +29,7 @@ jobs:
             maven-${{ runner.os }}-
 
       - name: Run Tests (Headless)
-        run: mvn clean test -Dsuite=suite -X
+        run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
 
       - name: Upload Extent Report
         if: always()
