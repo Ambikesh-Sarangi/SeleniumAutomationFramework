@@ -5,6 +5,7 @@ target/
 logs/
 reports/
 screenshots/
+test-output/
 
 # IDE files
 .idea/
