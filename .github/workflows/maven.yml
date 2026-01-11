@@ -29,7 +29,7 @@ jobs:
             maven-${{ runner.os }}-
 
       - name: Run Tests (Headless)
-        run: mvn clean test
+        run: mvn clean test -Dsuite=suite -X
 
       - name: Upload Extent Report
         if: always()
