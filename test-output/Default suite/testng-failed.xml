@@ -3,13 +3,20 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.NaukriPortalLoginTest">
+      <class name="tests.HomePageTest">
         <methods>
-          <include name="loginTest"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="homepageTest"/>
+        </methods>
+      </class> <!-- tests.HomePageTest -->
+      <class name="tests.FormPageTest">
+        <methods>
+          <include name="practiceFormTest"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- tests.NaukriPortalLoginTest -->
+      </class> <!-- tests.FormPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

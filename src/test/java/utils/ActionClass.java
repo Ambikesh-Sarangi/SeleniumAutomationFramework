@@ -1,12 +1,14 @@
 package utils;
 
-import base.BaseClass;
+import java.time.Duration;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
+import base.BaseClass;
 
 public class ActionClass {
 
@@ -25,6 +27,12 @@ public class ActionClass {
 
     public void click(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
+    }
+    
+    /* -------------------- GET ELEMENTS -------------------- */
+    
+    public List<WebElement> getElements(By locator) {
+    	return BaseClass.getDriver().findElements(locator);
     }
 
     /* -------------------- SEND KEYS -------------------- */
@@ -45,6 +53,16 @@ public class ActionClass {
 
     public String getText(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getText();
+    }
+    
+    public String getText(WebElement element) {
+        return wait.until(ExpectedConditions.visibilityOf(element)).getText();
+    }
+    
+    /* -------------------- GET ATTRIBUTE -------------------- */
+    
+    public String getAttribute(By locator, String attributeName) {
+    	return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).getAttribute(attributeName);
     }
 
     /* -------------------- VISIBILITY -------------------- */

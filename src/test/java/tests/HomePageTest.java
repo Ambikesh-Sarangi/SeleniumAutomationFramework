@@ -13,7 +13,6 @@ public class HomePageTest extends BaseClass{
 
 	@Test
 	public void homepageTest() {
-		
 		HomePage homePage = new HomePage();
 		homePage.verifyHomePageLogo();
 		Assert.assertTrue(homePage.verifyHomePageHeader().equalsIgnoreCase("Selenium - Automation Practice Form"));
