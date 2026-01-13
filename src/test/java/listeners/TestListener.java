@@ -34,6 +34,9 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
+    	if (ExtentManager.getTest() == null) {
+            return; // DataProvider failure safety
+        }
         String path = ScreenshotUtil.capture(result.getMethod().getMethodName());
         ExtentManager.getTest().fail(result.getThrowable());
         if (path != null) {

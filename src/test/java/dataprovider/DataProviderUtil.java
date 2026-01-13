@@ -10,8 +10,8 @@ import utils.ExcelReader;
 
 public class DataProviderUtil {
 	
-	private static final String FILE_PATH = System.getProperty("user.dir")+"/src/test/resources/testdata/TestData.xlsx";
-	private static final String RESOURCE_PATH = "testdata/TestData.xlsx";
+	private static final String FILE_PATH = System.getProperty("user.dir")+"/src/test/resources/testdata/TestDataSheet.xlsx";
+	private static final String RESOURCE_PATH = "testdata/TestDataSheet.xlsx";
 
 		
 		@DataProvider(name = "validLoginData")
@@ -19,12 +19,12 @@ public class DataProviderUtil {
 			return getSheetData("validLoginData");
 		}
 		
-		@DataProvider(name = "invalidLoginData")
-		public static Object[][] invalidLoginData() {
-			return getSheetData("invalidLoginData");
+		@DataProvider(name = "practiceForm")
+		public static Object[][] practiceFormData() {
+			return getSheetData("PracticeForm");
 		}
 		
-		private static Object[][] getSheetData(String sheetName) {
+		/*private static Object[][] getSheetData(String sheetName) {
 			boolean headless = Boolean.parseBoolean(ConfigReader.getProp("headless"));
 			List<String[]> sheetData;
 			if(headless) {
@@ -36,6 +36,16 @@ public class DataProviderUtil {
 			} else {
 				sheetData = ExcelReader.getSheetData(FILE_PATH, sheetName);
 			}
+			Object[][] data = new Object[sheetData.size()][sheetData.get(0).length];
+	        for (int i = 0; i < sheetData.size(); i++) {
+	            data[i] = sheetData.get(i);
+	        }
+	        return data;
+		} */
+		
+		private static Object[][] getSheetData(String sheetName) {
+			List<String[]> sheetData;
+			sheetData = ExcelReader.getSheetData(FILE_PATH, sheetName);
 			Object[][] data = new Object[sheetData.size()][sheetData.get(0).length];
 	        for (int i = 0; i < sheetData.size(); i++) {
 	            data[i] = sheetData.get(i);

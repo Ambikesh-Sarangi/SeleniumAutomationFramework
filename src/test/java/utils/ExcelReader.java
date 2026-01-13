@@ -36,30 +36,39 @@ public class ExcelReader {
 	}
 
 	private static String getCellValue(Cell cell) {
+
 		if (cell == null) {
 			return "";
 		}
 
 		switch (cell.getCellType()) {
+
 		case STRING:
-			return cell.getStringCellValue();
+			return cell.getStringCellValue().trim();
+
 		case NUMERIC:
 			if (DateUtil.isCellDateFormatted(cell)) {
-				return cell.getDateCellValue().toString();
+				return new DataFormatter().formatCellValue(cell);
 			}
+			return new DataFormatter().formatCellValue(cell);
+
 		case BOOLEAN:
 			return String.valueOf(cell.getBooleanCellValue());
+
+		case BLANK:
+			return "";
+
 		default:
 			return "";
 		}
 	}
 
-	// ✅ CI execution (classpath / GitHub Actions)
+	
 	public static List<String[]> getSheetData(InputStream is, String sheetName) {
 		return readSheet(is, sheetName);
 	}
 
-	// 🔥 COMMON logic (single source of truth)
+	
 	private static List<String[]> readSheet(InputStream is, String sheetName) {
 		List<String[]> data = new ArrayList<>();
 		try (Workbook workbook = new XSSFWorkbook(is)) {
@@ -68,7 +77,7 @@ public class ExcelReader {
 				throw new IllegalArgumentException("Worksheet " + sheetName + " does not exist");
 			}
 			for (Row row : sheet) {
-				// ⛔ Skip header row
+				
 				if (row.getRowNum() == 0) {
 					continue;
 				}
