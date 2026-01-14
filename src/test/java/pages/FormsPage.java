@@ -59,8 +59,13 @@ public class FormsPage {
 				ExtentManager.getTest().warning("Hobby not found in UI, skipped: " + trimmedHobby);
 			}
 		}
+		action.type(practiceFormPicture, System.getProperty("user.dir")+"/src/test/resources/testdata/ProfilePicture.jpeg");
 		action.type(practiceFormAddress, address);
 		action.selectByValue(practiceFormState, state);
 		action.selectByValue(practiceFormCity, city);
+	}
+	
+	public void clickRegistrationFormLoginButton() {
+		action.click(practiceFormLoginButton);
 	}
 }
