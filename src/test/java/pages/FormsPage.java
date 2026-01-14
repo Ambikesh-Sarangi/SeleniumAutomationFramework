@@ -55,7 +55,6 @@ public class FormsPage {
 			By checkbox = practiceFormHobbies(trimmedHobby);
 			if(action.isDisplayed(checkbox)) {
 				action.click(checkbox);
-				ExtentManager.getTest().info("Selected hobby: " + trimmedHobby);
 			} else {
 				ExtentManager.getTest().warning("Hobby not found in UI, skipped: " + trimmedHobby);
 			}
