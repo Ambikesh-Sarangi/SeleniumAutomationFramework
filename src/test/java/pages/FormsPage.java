@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 
 import utils.ActionClass;
+import utils.ExtentManager;
 
 public class FormsPage {
 	
@@ -18,7 +19,7 @@ public class FormsPage {
 	By practiceFormMobile = By.id("mobile");
 	By practiceFormDOB = By.id("dob");
 	By practiceFormSubjects = By.id("subjects");
-	By practiceFormHobbies = By.xpath("//input[@type='checkbox']");
+	By practiceFormHobbies(String hobbyName) { return By.xpath("//label[normalize-space()='" + hobbyName + "']/preceding-sibling::input");}
 	By practiceFormPicture = By.id("picture");
 	By practiceFormAddress = By.xpath("//textarea[@placeholder='Currend Address']");
 	By practiceFormState = By.id("state");
@@ -47,10 +48,20 @@ public class FormsPage {
 		action.type(practiceFormMobile, mobileNumber);
 		action.type(practiceFormDOB, dob);
 		action.type(practiceFormSubjects, subjects);
-		//Add Hobbies
+		
+		String[] hobbiesList = hobbies.split(",");
+		for(String word: hobbiesList) {
+			String trimmedHobby = word.trim();
+			By checkbox = practiceFormHobbies(trimmedHobby);
+			if(action.isDisplayed(checkbox)) {
+				action.click(checkbox);
+				ExtentManager.getTest().info("Selected hobby: " + trimmedHobby);
+			} else {
+				ExtentManager.getTest().warning("Hobby not found in UI, skipped: " + trimmedHobby);
+			}
+		}
 		action.type(practiceFormAddress, address);
 		action.selectByValue(practiceFormState, state);
 		action.selectByValue(practiceFormCity, city);
-		
 	}
 }

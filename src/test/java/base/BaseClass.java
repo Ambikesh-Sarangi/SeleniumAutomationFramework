@@ -12,9 +12,10 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import config.ConfigReader;
+import setup.TestSetup;
 import utils.Log;
 
-public class BaseClass {
+public class BaseClass extends TestSetup{
 	
 	private static ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	private static final Logger log = Log.getLogger(BaseClass.class);

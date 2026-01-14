@@ -23,7 +23,8 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestSuccess(ITestResult result) {
-    	ExtentManager.logStep("Test Passed Successfully");
+    	String testName = result.getMethod().getMethodName();
+    	ExtentManager.logStepWithScreenshot(testName, "Test Passed Successfully");
         ExtentManager.removeTest();
     }
 

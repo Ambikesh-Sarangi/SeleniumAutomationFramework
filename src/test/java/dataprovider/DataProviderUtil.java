@@ -1,17 +1,15 @@
 package dataprovider;
 
-import java.io.InputStream;
 import java.util.List;
 
 import org.testng.annotations.DataProvider;
 
-import config.ConfigReader;
 import utils.ExcelReader;
 
 public class DataProviderUtil {
 	
 	private static final String FILE_PATH = System.getProperty("user.dir")+"/src/test/resources/testdata/TestDataSheet.xlsx";
-	private static final String RESOURCE_PATH = "testdata/TestDataSheet.xlsx";
+//	private static final String RESOURCE_PATH = "testdata/TestDataSheet.xlsx";
 
 		
 		@DataProvider(name = "validLoginData")
