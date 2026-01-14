@@ -22,7 +22,7 @@ public class FormsPage {
 	By practiceFormPicture = By.id("picture");
 	By practiceFormAddress = By.xpath("//textarea[@placeholder='Currend Address']");
 	By practiceFormState = By.id("state");
-	By practiceFormCity = By.id("City");
+	By practiceFormCity = By.id("city");
 	By practiceFormLoginButton = By.xpath("//input[@type='submit']");
 	
 	public void openFormsPanel() {
@@ -44,9 +44,13 @@ public class FormsPage {
 		action.type(practiceFormName, name);
 		action.type(practiceFormEmail, email);
 		action.click(practiceFormMaleGenderRadioButton);
+		action.type(practiceFormMobile, mobileNumber);
 		action.type(practiceFormDOB, dob);
 		action.type(practiceFormSubjects, subjects);
 		//Add Hobbies
 		action.type(practiceFormAddress, address);
+		action.selectByValue(practiceFormState, state);
+		action.selectByValue(practiceFormCity, city);
+		
 	}
 }

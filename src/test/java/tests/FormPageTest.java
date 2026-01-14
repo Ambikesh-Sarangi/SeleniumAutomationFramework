@@ -19,6 +19,7 @@ public class FormPageTest extends BaseClass{
 		formPage.clickPracticeForm();
 		Assert.assertTrue(formPage.verifyStudentRegistrationFormDisplayed().equalsIgnoreCase("Student Registration Form"));
 		formPage.fillPracticeForm(Name, Email, Gender, Mobile, DOB, Subjects, Hobbies, Address, State, City);
+		
 	}
 
 }

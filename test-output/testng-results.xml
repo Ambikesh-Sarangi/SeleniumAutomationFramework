@@ -2,30 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-13T11:42:41 IST" name="Suite" finished-at="2026-01-13T11:42:58 IST" duration-ms="17382">
+  <suite started-at="2026-01-14T11:48:16 IST" name="Suite" finished-at="2026-01-14T11:48:35 IST" duration-ms="18741">
     <groups>
     </groups>
-    <test started-at="2026-01-13T11:42:41 IST" name="Test" finished-at="2026-01-13T11:42:58 IST" duration-ms="17382">
-      <class name="tests.HomePageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.HomePageTest@119cbf96]" started-at="2026-01-13T11:42:41 IST" name="setup" finished-at="2026-01-13T11:42:53 IST" duration-ms="12141" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="homepageTest()[pri:0, instance:tests.HomePageTest@119cbf96]" started-at="2026-01-13T11:42:53 IST" name="homepageTest" finished-at="2026-01-13T11:42:55 IST" duration-ms="1623" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- homepageTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomePageTest@119cbf96]" started-at="2026-01-13T11:42:55 IST" name="tearDown" finished-at="2026-01-13T11:42:55 IST" duration-ms="91" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- tests.HomePageTest -->
+    <test started-at="2026-01-14T11:48:16 IST" name="Test" finished-at="2026-01-14T11:48:35 IST" duration-ms="18741">
       <class name="tests.FormPageTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.FormPageTest@51549490]" started-at="2026-01-13T11:42:41 IST" name="setup" finished-at="2026-01-13T11:42:50 IST" duration-ms="8539" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.FormPageTest@51549490]" started-at="2026-01-14T11:48:17 IST" name="setup" finished-at="2026-01-14T11:48:26 IST" duration-ms="9264" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="practiceFormTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.FormPageTest@51549490]" started-at="2026-01-13T11:42:50 IST" name="practiceFormTest" data-provider="practiceForm" finished-at="2026-01-13T11:42:58 IST" duration-ms="8450" status="PASS">
+        <test-method signature="practiceFormTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.FormPageTest@51549490]" started-at="2026-01-14T11:48:26 IST" name="practiceFormTest" data-provider="practiceForm" finished-at="2026-01-14T11:48:35 IST" duration-ms="9089" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -86,11 +72,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- practiceFormTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.FormPageTest@51549490]" started-at="2026-01-13T11:42:58 IST" name="tearDown" finished-at="2026-01-13T11:42:58 IST" duration-ms="88" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.FormPageTest@51549490]" started-at="2026-01-14T11:48:35 IST" name="tearDown" finished-at="2026-01-14T11:48:35 IST" duration-ms="86" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.FormPageTest -->
+      <class name="tests.HomePageTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.HomePageTest@119cbf96]" started-at="2026-01-14T11:48:17 IST" name="setup" finished-at="2026-01-14T11:48:25 IST" duration-ms="8425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="homepageTest()[pri:0, instance:tests.HomePageTest@119cbf96]" started-at="2026-01-14T11:48:25 IST" name="homepageTest" finished-at="2026-01-14T11:48:27 IST" duration-ms="1965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homepageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomePageTest@119cbf96]" started-at="2026-01-14T11:48:27 IST" name="tearDown" finished-at="2026-01-14T11:48:27 IST" duration-ms="91" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.HomePageTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

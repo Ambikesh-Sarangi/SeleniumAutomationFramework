@@ -5,7 +5,7 @@
     <classes>
       <class name="tests.FormPageTest">
         <methods>
-          <include name="practiceFormTest"/>
+          <include name="practiceFormTest" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="setup"/>
         </methods>

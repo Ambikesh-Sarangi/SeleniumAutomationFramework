@@ -1,19 +1,13 @@
 package listeners;
 
-import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import com.aventstack.extentreports.ExtentTest;
-
 import utils.ExtentManager;
-import utils.Log;
-import utils.ScreenshotUtil;
 
 public class TestListener implements ITestListener {
 	
-	private static final Logger log = Log.getLogger(TestListener.class);
 	
 	@Override
 	public void onStart(ITestContext context) {
@@ -22,32 +16,36 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
-    	log.info("Executing Testcase: " + result.getMethod().getMethodName());
-        ExtentTest test = ExtentManager.getExtent().createTest(result.getMethod().getMethodName());
-        ExtentManager.setTest(test);
+    	String testName = result.getMethod().getMethodName();
+        ExtentManager.startTest(testName);
+        ExtentManager.logStep("Executing Testcase: " + testName);
     }
 
     @Override
     public void onTestSuccess(ITestResult result) {
-        ExtentManager.getTest().pass("Test Passed");
+    	ExtentManager.logStep("Test Passed Successfully");
+        ExtentManager.removeTest();
     }
 
     @Override
     public void onTestFailure(ITestResult result) {
-    	if (ExtentManager.getTest() == null) {
-            return; // DataProvider failure safety
-        }
-        String path = ScreenshotUtil.capture(result.getMethod().getMethodName());
-        ExtentManager.getTest().fail(result.getThrowable());
-        if (path != null) {
-            try {
-                ExtentManager.getTest().addScreenCaptureFromPath(path);
-            } catch (Exception ignored) {}
-        }
+    	String testName = result.getMethod().getMethodName();
+    	String failureMessage = result.getThrowable() != null
+                ? result.getThrowable().getMessage()
+                : "Test failed with unknown error";
+        
+    	ExtentManager.logFailure(failureMessage,  "Test End: " + testName + " - ❌ Test Failed");
+        ExtentManager.removeTest();
     }
 
     @Override
+    public void onTestSkipped(ITestResult result) {
+        ExtentManager.logSkip("Test Skipped");
+        ExtentManager.removeTest();
+    }
+    
+    @Override
     public void onFinish(ITestContext context) {
-        ExtentManager.flush();
+        ExtentManager.getExtent().flush();
     }
 }

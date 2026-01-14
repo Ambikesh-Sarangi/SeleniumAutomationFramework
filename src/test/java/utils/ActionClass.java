@@ -6,6 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import base.BaseClass;
@@ -48,6 +49,14 @@ public class ActionClass {
         element.clear();
         element.sendKeys(value);
     }
+    
+    /* ----------------------- SELECT DROPDOWN ------------------- */
+    public void selectByValue(By locator, String value) {
+    	WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    	Select select = new Select(element);
+    	select.selectByValue(value);
+    	
+    }
 
     /* -------------------- GET TEXT -------------------- */
 
@@ -74,6 +83,7 @@ public class ActionClass {
             return false;
         }
     }
+    
 
     /* -------------------- WAIT -------------------- */
 
