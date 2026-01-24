@@ -69,6 +69,7 @@ public class FormsPage {
 	
 	public void clickRegistrationFormLoginButton() {
 		action.isDisplayed(practiceFormLoginButton);
+		action.scrollToElement(practiceFormLoginButton);
 		action.click(practiceFormLoginButton);
 	}
 	

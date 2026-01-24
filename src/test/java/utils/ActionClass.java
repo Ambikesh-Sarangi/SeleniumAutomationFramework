@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -14,6 +15,7 @@ import base.BaseClass;
 public class ActionClass {
 
     private WebDriverWait wait;
+    JavascriptExecutor js;
 
     public ActionClass() {
         // Uses ThreadLocal driver safely
@@ -57,6 +59,14 @@ public class ActionClass {
     	select.selectByValue(value);
     	
     }
+    
+    /* ----------------------- SCROLL TO ELEMENT ------------------- */
+    public void scrollToElement(By locator) {
+    	WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    	js.executeScript("arguments[0].scrollIntoView();", element);
+    	
+    }
+    
 
     /* -------------------- GET TEXT -------------------- */
 
