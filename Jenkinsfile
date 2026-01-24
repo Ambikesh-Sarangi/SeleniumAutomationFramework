@@ -36,6 +36,14 @@ pipeline {
             archiveArtifacts artifacts: 'reports/**', allowEmptyArchive: true
             archiveArtifacts artifacts: 'screenshots/**', allowEmptyArchive: true
             archiveArtifacts artifacts: 'logs/**', allowEmptyArchive: true
+            publishHTML([
+				allowMissing: false,
+                alwaysLinkToLastBuild: true,
+                keepAll: true,
+                reportDir: 'target/extent-reports',
+                reportFiles: 'ExtentReport.html',
+                reportName: 'Extent Automation Report'
+			])
         }
     }
 }
