@@ -15,7 +15,7 @@ import base.BaseClass;
 public class ActionClass {
 
     private WebDriverWait wait;
-    JavascriptExecutor js;
+    
 
     public ActionClass() {
         // Uses ThreadLocal driver safely
@@ -63,6 +63,7 @@ public class ActionClass {
     /* ----------------------- SCROLL TO ELEMENT ------------------- */
     public void scrollToElement(By locator) {
     	WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    	JavascriptExecutor js = (JavascriptExecutor) BaseClass.getDriver();
     	js.executeScript("arguments[0].scrollIntoView();", element);
     	
     }
