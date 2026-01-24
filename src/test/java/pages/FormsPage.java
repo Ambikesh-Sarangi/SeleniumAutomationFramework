@@ -26,6 +26,8 @@ public class FormsPage {
 	By practiceFormCity = By.id("city");
 	By practiceFormLoginButton = By.xpath("//input[@type='submit']");
 	
+	By registerForm = By.xpath("//li[@class='list-group-item' and normalize-space()='Register']");
+	
 	public void openFormsPanel() {
 		action.isDisplayed(formsPanel);
 		action.click(formsPanel);
@@ -66,6 +68,12 @@ public class FormsPage {
 	}
 	
 	public void clickRegistrationFormLoginButton() {
+		action.isDisplayed(practiceFormLoginButton);
 		action.click(practiceFormLoginButton);
+	}
+	
+	public void clickRegisterForm() {
+		action.isDisplayed(registerForm);
+		action.click(registerForm);
 	}
 }

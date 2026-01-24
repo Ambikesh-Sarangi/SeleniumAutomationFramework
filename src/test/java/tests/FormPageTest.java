@@ -21,5 +21,12 @@ public class FormPageTest extends BaseClass{
 		formPage.fillPracticeForm(Name, Email, Gender, Mobile, DOB, Subjects, Hobbies, Address, State, City);
 		formPage.clickRegistrationFormLoginButton();
 	}
-
+	
+	@Test
+	public void registerationTest() {
+		FormsPage formPage = new FormsPage();
+		formPage.openFormsPanel();
+		formPage.clickRegisterForm();
+	}
+	
 }
