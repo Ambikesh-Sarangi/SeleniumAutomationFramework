@@ -1,29 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-01-15T00:35:24 IST" name="Default suite" finished-at="2026-01-15T00:35:38 IST" duration-ms="13958">
+  <suite started-at="2026-01-25T03:09:23 IST" name="Suite" finished-at="2026-01-25T03:10:39 IST" duration-ms="76453">
     <groups>
     </groups>
-    <test started-at="2026-01-15T00:35:24 IST" name="Default test" finished-at="2026-01-15T00:35:38 IST" duration-ms="13958">
+    <test started-at="2026-01-25T03:09:23 IST" name="Test" finished-at="2026-01-25T03:10:39 IST" duration-ms="76453">
       <class name="tests.FormPageTest">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.FormPageTest@5b367418]" started-at="2026-01-15T00:35:24 IST" name="beforeSuite" finished-at="2026-01-15T00:35:24 IST" duration-ms="5" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.FormPageTest@5b367418]" started-at="2026-01-15T00:35:24 IST" name="setup" finished-at="2026-01-15T00:35:34 IST" duration-ms="9934" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.FormPageTest@1984b1f]" started-at="2026-01-25T03:09:23 IST" name="setup" finished-at="2026-01-25T03:10:04 IST" duration-ms="40662" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="registerationTest()[pri:0, instance:tests.FormPageTest@5b367418]" started-at="2026-01-15T00:35:34 IST" name="registerationTest" finished-at="2026-01-15T00:35:37 IST" duration-ms="3292" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.FormPageTest@1984b1f]" started-at="2026-01-25T03:09:23 IST" name="setup" finished-at="2026-01-25T03:10:04 IST" duration-ms="40749" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="registerationTest()[pri:0, instance:tests.FormPageTest@1984b1f]" started-at="2026-01-25T03:10:04 IST" name="registerationTest" finished-at="2026-01-25T03:10:12 IST" duration-ms="8105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerationTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.FormPageTest@5b367418]" started-at="2026-01-15T00:35:38 IST" name="tearDown" finished-at="2026-01-15T00:35:38 IST" duration-ms="92" status="PASS">
+        <test-method signature="practiceFormTest(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.FormPageTest@1984b1f]" started-at="2026-01-25T03:10:04 IST" name="practiceFormTest" data-provider="practiceForm" finished-at="2026-01-25T03:10:39 IST" duration-ms="34937" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[PracticeFormTest]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Louis Litt]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[louis.litt@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[9876543210]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[25/07/1999]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Selenium, Java]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Sports, Reading, Gym, Music]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Patharagadia]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[NCR]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[Lucknow]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- practiceFormTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.FormPageTest@1984b1f]" started-at="2026-01-25T03:10:13 IST" name="tearDown" finished-at="2026-01-25T03:10:13 IST" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.FormPageTest@1984b1f]" started-at="2026-01-25T03:10:39 IST" name="tearDown" finished-at="2026-01-25T03:10:39 IST" duration-ms="93" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.FormPageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="tests.HomePageTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:tests.HomePageTest@7d446ed1]" started-at="2026-01-25T03:09:23 IST" name="beforeSuite" finished-at="2026-01-25T03:09:23 IST" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.HomePageTest@7d446ed1]" started-at="2026-01-25T03:09:23 IST" name="setup" finished-at="2026-01-25T03:09:59 IST" duration-ms="36295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="homepageTest()[pri:0, instance:tests.HomePageTest@7d446ed1]" started-at="2026-01-25T03:09:59 IST" name="homepageTest" finished-at="2026-01-25T03:10:08 IST" duration-ms="8269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- homepageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.HomePageTest@7d446ed1]" started-at="2026-01-25T03:10:08 IST" name="tearDown" finished-at="2026-01-25T03:10:08 IST" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.HomePageTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

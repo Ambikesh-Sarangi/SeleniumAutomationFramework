@@ -40,7 +40,7 @@ pipeline {
 				allowMissing: false,
                 alwaysLinkToLastBuild: true,
                 keepAll: true,
-                reportDir: 'target/extent-reports',
+                reportDir: 'reports',
                 reportFiles: 'ExtentReport.html',
                 reportName: 'Extent Automation Report'
 			])
